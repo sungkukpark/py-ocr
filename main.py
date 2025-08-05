@@ -2,7 +2,8 @@ import pytesseract
 from PIL import Image
 
 # 이미지 파일 경로 (이미지 파일이 있는 경로로 변경)
-image_path = "image.png"
+image_path = "kor.png"
+# image_path = "eng.png"
 
 try:
     # 이미지 열기
@@ -10,7 +11,9 @@ try:
 
     # OCR 실행 (한국어 텍스트 추출)
     text = pytesseract.image_to_string(
-        image, lang="eng"
+        # image, lang="eng"
+        image,
+        lang="kor",
     )  # lang='kor'는 한국어 인식 옵션
 
     # 추출된 텍스트 출력
